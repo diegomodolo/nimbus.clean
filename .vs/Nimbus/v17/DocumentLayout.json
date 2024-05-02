@@ -1,0 +1,82 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Src\\Studies\\Nimbus\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}|src\\Common\\Nimbus.Domain\\Nimbus.Domain.csproj|d:\\src\\studies\\nimbus\\src\\common\\nimbus.domain\\cadastros\\cadastrosmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}|src\\Common\\Nimbus.Domain\\Nimbus.Domain.csproj|solutionrelative:src\\common\\nimbus.domain\\cadastros\\cadastrosmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C06B39FA-01EA-45BE-B7D4-D24465522D90}|src\\API\\Nimbus.Api\\Nimbus.Api.csproj|d:\\src\\studies\\nimbus\\src\\api\\nimbus.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C06B39FA-01EA-45BE-B7D4-D24465522D90}|src\\API\\Nimbus.Api\\Nimbus.Api.csproj|solutionrelative:src\\api\\nimbus.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{99b8fa2f-ab90-4f57-9c32-949f146f1914}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CadastrosMappingProfile.cs",
+              "DocumentMoniker": "D:\\Src\\Studies\\Nimbus\\src\\Common\\Nimbus.Domain\\Cadastros\\CadastrosMappingProfile.cs",
+              "RelativeDocumentMoniker": "src\\Common\\Nimbus.Domain\\Cadastros\\CadastrosMappingProfile.cs",
+              "ToolTip": "D:\\Src\\Studies\\Nimbus\\src\\Common\\Nimbus.Domain\\Cadastros\\CadastrosMappingProfile.cs",
+              "RelativeToolTip": "src\\Common\\Nimbus.Domain\\Cadastros\\CadastrosMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T18:16:45.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Src\\Studies\\Nimbus\\src\\API\\Nimbus.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\API\\Nimbus.Api\\Program.cs",
+              "ToolTip": "D:\\Src\\Studies\\Nimbus\\src\\API\\Nimbus.Api\\Program.cs",
+              "RelativeToolTip": "src\\API\\Nimbus.Api\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T18:15:54.217Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

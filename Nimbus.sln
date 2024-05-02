@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34818.151
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{82C8ED60-3922-4CC4-8D8A-7E3745AD2D39}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimbus.Api", "src\API\Nimbus.Api\Nimbus.Api.csproj", "{C06B39FA-01EA-45BE-B7D4-D24465522D90}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{906359F1-BA23-4B2F-9C42-D0E969D17A24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{17F94DD9-C767-4B9C-9A1C-23D1FE8D31D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8D56CAE5-345E-4998-84DE-7A7D6507949C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{55BA0D1F-0BF2-4FB9-B0FE-1121BBC5BEAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cadastros", "Cadastros", "{CD339EB2-AEFF-4660-93D7-F608CB5C280B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Api", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Api.csproj", "{7DDABAA5-2966-40F6-A697-1BF69FB0FB5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain.csproj", "{8DD5A40D-3CBC-4199-96D9-F722A2A785CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.csproj", "{CFFA0171-0EC7-44AA-A4F9-34FA01BD1E70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure.csproj", "{86147B09-FD9D-4E01-9E75-8B423ABF3534}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation.csproj", "{D0C745E9-8FBD-430F-ACAD-A4711E20BD8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Domain", "src\Common\Nimbus.Domain\Nimbus.Domain.csproj", "{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Modules.Infrastructure", "src\Modules\Nimbus.Modules.Infrastructure\Nimbus.Modules.Infrastructure.csproj", "{9AB30C3D-91B5-49B1-9C5E-A25C2A88597D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Common.Application", "src\Common\Nimbus.Common.Application\Nimbus.Common.Application.csproj", "{CCCA3062-870E-46AF-8B72-81FCF409C2DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C06B39FA-01EA-45BE-B7D4-D24465522D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C06B39FA-01EA-45BE-B7D4-D24465522D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C06B39FA-01EA-45BE-B7D4-D24465522D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C06B39FA-01EA-45BE-B7D4-D24465522D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DDABAA5-2966-40F6-A697-1BF69FB0FB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DDABAA5-2966-40F6-A697-1BF69FB0FB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DDABAA5-2966-40F6-A697-1BF69FB0FB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDABAA5-2966-40F6-A697-1BF69FB0FB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD5A40D-3CBC-4199-96D9-F722A2A785CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD5A40D-3CBC-4199-96D9-F722A2A785CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD5A40D-3CBC-4199-96D9-F722A2A785CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD5A40D-3CBC-4199-96D9-F722A2A785CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFFA0171-0EC7-44AA-A4F9-34FA01BD1E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFFA0171-0EC7-44AA-A4F9-34FA01BD1E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFFA0171-0EC7-44AA-A4F9-34FA01BD1E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFFA0171-0EC7-44AA-A4F9-34FA01BD1E70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86147B09-FD9D-4E01-9E75-8B423ABF3534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86147B09-FD9D-4E01-9E75-8B423ABF3534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86147B09-FD9D-4E01-9E75-8B423ABF3534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86147B09-FD9D-4E01-9E75-8B423ABF3534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0C745E9-8FBD-430F-ACAD-A4711E20BD8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C745E9-8FBD-430F-ACAD-A4711E20BD8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C745E9-8FBD-430F-ACAD-A4711E20BD8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C745E9-8FBD-430F-ACAD-A4711E20BD8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB30C3D-91B5-49B1-9C5E-A25C2A88597D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB30C3D-91B5-49B1-9C5E-A25C2A88597D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB30C3D-91B5-49B1-9C5E-A25C2A88597D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB30C3D-91B5-49B1-9C5E-A25C2A88597D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCCA3062-870E-46AF-8B72-81FCF409C2DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCCA3062-870E-46AF-8B72-81FCF409C2DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCCA3062-870E-46AF-8B72-81FCF409C2DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCCA3062-870E-46AF-8B72-81FCF409C2DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C06B39FA-01EA-45BE-B7D4-D24465522D90} = {17F94DD9-C767-4B9C-9A1C-23D1FE8D31D3}
+		{17F94DD9-C767-4B9C-9A1C-23D1FE8D31D3} = {906359F1-BA23-4B2F-9C42-D0E969D17A24}
+		{8D56CAE5-345E-4998-84DE-7A7D6507949C} = {906359F1-BA23-4B2F-9C42-D0E969D17A24}
+		{55BA0D1F-0BF2-4FB9-B0FE-1121BBC5BEAA} = {906359F1-BA23-4B2F-9C42-D0E969D17A24}
+		{CD339EB2-AEFF-4660-93D7-F608CB5C280B} = {55BA0D1F-0BF2-4FB9-B0FE-1121BBC5BEAA}
+		{7DDABAA5-2966-40F6-A697-1BF69FB0FB5F} = {CD339EB2-AEFF-4660-93D7-F608CB5C280B}
+		{8DD5A40D-3CBC-4199-96D9-F722A2A785CC} = {CD339EB2-AEFF-4660-93D7-F608CB5C280B}
+		{CFFA0171-0EC7-44AA-A4F9-34FA01BD1E70} = {CD339EB2-AEFF-4660-93D7-F608CB5C280B}
+		{86147B09-FD9D-4E01-9E75-8B423ABF3534} = {CD339EB2-AEFF-4660-93D7-F608CB5C280B}
+		{D0C745E9-8FBD-430F-ACAD-A4711E20BD8B} = {CD339EB2-AEFF-4660-93D7-F608CB5C280B}
+		{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B} = {8D56CAE5-345E-4998-84DE-7A7D6507949C}
+		{9AB30C3D-91B5-49B1-9C5E-A25C2A88597D} = {55BA0D1F-0BF2-4FB9-B0FE-1121BBC5BEAA}
+		{CCCA3062-870E-46AF-8B72-81FCF409C2DF} = {8D56CAE5-345E-4998-84DE-7A7D6507949C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE1F2E76-84B1-4E61-9DC2-1889AC8CD7F8}
+	EndGlobalSection
+EndGlobal

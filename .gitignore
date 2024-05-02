@@ -1,0 +1,7 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+/src/Modules/Cadastros/EstruturaOrganizacional/Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application/Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.csproj
+/src/Modules/Cadastros/EstruturaOrganizacional/Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application/Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.csproj
