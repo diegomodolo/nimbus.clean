@@ -9,7 +9,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.csproj" />
+      <ProjectReference Include="..\Nimbus.Common.Domain\Nimbus.Common.Domain.csproj" />
     </ItemGroup>
 
 </Project>

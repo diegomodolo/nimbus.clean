@@ -7,22 +7,21 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Common.Infrastructure.EventBus
+namespace Nimbus.Common.Infrastructure.EventBus;
+
+using MassTransit;
+using Nimbus.Common.Application.EventBus;
+
+internal sealed class EventBus(IBus bus) : IEventBus
 {
-    using MassTransit;
-    using Nimbus.Common.Application.EventBus;
+    #region Public Methods and Operators
 
-    internal sealed class EventBus(IBus bus) : IEventBus
+    /// <inheritdoc />
+    public async Task PublishAsync<T>(T integrationEvent, CancellationToken cancellationToken = default)
+        where T : IIntegrationEvent
     {
-        #region Public Methods and Operators
-
-        /// <inheritdoc />
-        public async Task PublishAsync<T>(T integrationEvent, CancellationToken cancellationToken = default)
-            where T : IIntegrationEvent
-        {
-            await bus.Publish(integrationEvent, cancellationToken);
-        }
-
-        #endregion
+        await bus.Publish(integrationEvent, cancellationToken);
     }
+
+    #endregion
 }

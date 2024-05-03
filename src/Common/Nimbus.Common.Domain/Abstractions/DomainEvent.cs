@@ -7,28 +7,33 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Common.Domain.Abstractions
-{
-    public abstract class DomainEvent : IDomainEvent
-    {
-        #region Constructors and Destructors
+namespace Nimbus.Common.Domain.Abstractions;
 
-        public DomainEvent()
-        {
+public abstract class DomainEvent : IDomainEvent
+{
+    #region Constructors and Destructors
+
+    protected DomainEvent()
+    {
             this.Id = Guid.NewGuid();
             this.OccurredOnUtc = DateTime.UtcNow;
         }
 
-        #endregion
+    protected DomainEvent(Guid id, DateTime occurredOnUtc)
+    {
+            this.Id = id;
+            this.OccurredOnUtc = occurredOnUtc;
+        }
 
-        #region Public Properties
+    #endregion
 
-        /// <inheritdoc />
-        public Guid Id { get; init; }
+    #region Public Properties
 
-        /// <inheritdoc />
-        public DateTime OccurredOnUtc { get; init; }
+    /// <inheritdoc />
+    public Guid Id { get; init; }
 
-        #endregion
-    }
+    /// <inheritdoc />
+    public DateTime OccurredOnUtc { get; init; }
+
+    #endregion
 }

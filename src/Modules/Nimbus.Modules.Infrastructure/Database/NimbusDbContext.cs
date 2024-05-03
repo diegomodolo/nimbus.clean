@@ -14,7 +14,7 @@ using Nimbus.Common.Domain.Abstractions;
 using Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001;
 
 public sealed class NimbusDbContext(DbContextOptions<NimbusDbContext> options) : DbContext(options),
-                                                                                 IUnitOfWork
+    IUnitOfWork
 {
     #region Public Properties
 

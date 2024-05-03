@@ -27,6 +27,7 @@
         <ProjectReference Include="..\..\Common\Nimbus.Common.Application\Nimbus.Common.Application.csproj" />
         <ProjectReference Include="..\..\Common\Nimbus.Common.Infrastructure\Nimbus.Common.Infrastructure.csproj" />
         <ProjectReference Include="..\..\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure.csproj" />
+        <ProjectReference Include="..\..\Modules\Cadastros\Nimbus.Modules.IntegrationTest\Nimbus.Modules.IntegrationTest.csproj" />
     </ItemGroup>
 
 </Project>

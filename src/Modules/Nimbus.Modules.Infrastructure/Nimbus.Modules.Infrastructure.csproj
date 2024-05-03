@@ -4,5 +4,6 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\Common\Nimbus.Common.Domain\Nimbus.Common.Domain.csproj" />
+        <ProjectReference Include="..\..\Common\Nimbus.Common.Infrastructure\Nimbus.Common.Infrastructure.csproj" />
     </ItemGroup>
 </Project>

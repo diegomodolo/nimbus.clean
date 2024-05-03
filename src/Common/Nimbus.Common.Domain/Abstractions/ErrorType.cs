@@ -7,18 +7,17 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Common.Domain.Abstractions
+namespace Nimbus.Common.Domain.Abstractions;
+
+public enum ErrorType
 {
-    public enum ErrorType
-    {
-        Failure = 0,
+    Failure = 0,
 
-        Validation = 1,
+    Validation = 1,
 
-        Problem = 2,
+    Problem = 2,
 
-        NotFound = 3,
+    NotFound = 3,
 
-        Conflict = 4
-    }
+    Conflict = 4
 }

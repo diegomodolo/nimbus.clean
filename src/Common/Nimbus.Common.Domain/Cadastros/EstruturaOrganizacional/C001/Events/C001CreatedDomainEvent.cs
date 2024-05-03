@@ -7,16 +7,15 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001.Events
+namespace Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001.Events;
+
+using Nimbus.Common.Domain.Abstractions;
+
+public sealed class C001CreatedDomainEvent(string Codigo) : DomainEvent
 {
-    using Nimbus.Common.Domain.Abstractions;
+    #region Public Properties
 
-    public sealed class C001CreatedDomainEvent(Guid eventId) : DomainEvent
-    {
-        #region Public Properties
+    public string Codigo { get; init; } = Codigo;
 
-        public Guid EventId { get; init; } = eventId;
-
-        #endregion
-    }
+    #endregion
 }

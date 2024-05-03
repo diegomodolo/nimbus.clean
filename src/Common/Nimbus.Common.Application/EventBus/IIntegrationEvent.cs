@@ -7,16 +7,15 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Common.Application.EventBus
+namespace Nimbus.Common.Application.EventBus;
+
+public interface IIntegrationEvent
 {
-    public interface IIntegrationEvent
-    {
-        #region Public Properties
+    #region Public Properties
 
-        Guid Id { get; }
+    Guid Id { get; }
 
-        DateTime OccurredOnUtc { get; }
+    DateTime OccurredOnUtc { get; }
 
-        #endregion
-    }
+    #endregion
 }

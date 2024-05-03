@@ -7,18 +7,17 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001
+namespace Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001;
+
+public sealed class C001_HoldingDto
 {
-    public sealed class C001_HoldingDto
-    {
-        #region Public Properties
+    #region Public Properties
 
-        public string C001_Codigo { get; set; } = string.Empty;
+    public string C001_Codigo { get; set; } = string.Empty;
 
-        public string C001_Descricao { get; set; } = string.Empty;
+    public string C001_Descricao { get; set; } = string.Empty;
 
-        public bool RegistroAtivo { get; set; }
+    public bool RegistroAtivo { get; set; }
 
-        #endregion
-    }
+    #endregion
 }

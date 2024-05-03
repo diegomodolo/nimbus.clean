@@ -25,7 +25,7 @@ public partial class C001_Holding
                 RegistroAtivo = RegistroAtivo
             };
 
-        c001.Raise(new C001CreatedDomainEvent(Guid.NewGuid()));
+        c001.Raise(new C001CreatedDomainEvent(C001_Codigo));
 
         return c001;
     }

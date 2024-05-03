@@ -24,9 +24,6 @@ public static class ApplicationConfiguration
                 {
                     config.RegisterServicesFromAssemblies(moduleAssemblies);
 
-                    config.RegisterServicesFromAssembly(
-                        Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.AssemblyReference.Assembly);
-
 #pragma warning disable S125
                     // config.AddOpenBehavior(typeof(ExceptionHandlingPipelineBehavior<,>));
 #pragma warning restore S125

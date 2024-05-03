@@ -7,36 +7,37 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Modules.Infrastructure
+namespace Nimbus.Modules.Infrastructure;
+
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Nimbus.Common.Domain.Abstractions;
+using Nimbus.Common.Infrastructure.Interceptors;
+using Nimbus.Modules.Infrastructure.Database;
+
+public static class NimbusInfrastructureModule
 {
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using Nimbus.Common.Domain.Abstractions;
-    using Nimbus.Modules.Infrastructure.Database;
+    #region Public Methods and Operators
 
-    public static class NimbusInfrastructureModule
+    public static IServiceCollection AddNimbusInfrastructureModule(
+        this IServiceCollection services,
+        IConfiguration configuration)
+
     {
-        #region Public Methods and Operators
+        services.AddDbContext<NimbusDbContext>(
+            (sp, options) =>
+                {
+                    var databaseConnectionString = configuration.GetConnectionString("Database");
 
-        public static IServiceCollection AddNimbusInfrastructureModule(
-            this IServiceCollection services,
-            IConfiguration configuration)
+                    options.UseSqlServer(databaseConnectionString)
+                           .AddInterceptors(sp.GetRequiredService<PublishDomainEventsInterceptor>());
+                });
 
-        {
-            services.AddDbContext<NimbusDbContext>(
-                (sp, options) =>
-                    {
-                        var databaseConnectionString = configuration.GetConnectionString("Database");
+        services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<NimbusDbContext>());
 
-                        options.UseSqlServer(databaseConnectionString);
-                    });
-
-            services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<NimbusDbContext>());
-
-            return services;
-        }
-
-        #endregion
+        return services;
     }
+
+    #endregion
 }

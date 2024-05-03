@@ -17,6 +17,7 @@ using Nimbus.Common.Infrastructure;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation;
 using Nimbus.Modules.Infrastructure;
+using Nimbus.Modules.IntegrationTest;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -42,7 +43,7 @@ builder.Services.AddApplication(
 string databaseConnectionString = builder.Configuration.GetConnectionString("Database")!;
 string redisConnectionString = builder.Configuration.GetConnectionString("Cache")!;
 
-builder.Services.AddInfrastructure([], databaseConnectionString, redisConnectionString);
+builder.Services.AddInfrastructure([IntegrationTestModule.ConfigureConsumers], databaseConnectionString, redisConnectionString);
 
 // Nimbus Modules
 builder.Services.AddCadastrosEstruturaOrganizacionalModule();

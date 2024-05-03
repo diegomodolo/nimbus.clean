@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    
+    <ItemGroup>
+      <PackageReference Include="MassTransit" Version="8.2.1" />
+      <PackageReference Include="MassTransit.Abstractions" Version="8.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.IntegrationEvents\Nimbus.Modules.Cadastros.EstruturaOrganizacional.IntegrationEvents.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -15,16 +15,21 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Nimbus.Common.Application.Caching;
 using Nimbus.Common.Application.EventBus;
 using Nimbus.Common.Infrastructure.Caching;
+using Nimbus.Common.Infrastructure.Interceptors;
 using StackExchange.Redis;
 
 public static class InfrastructureConfiguration
 {
+    #region Public Methods and Operators
+
     public static IServiceCollection AddInfrastructure(
         this IServiceCollection services,
         Action<IRegistrationConfigurator>[] moduleConfigureConsumers,
         string databaseConnectionString,
         string redisConnectionString)
     {
+        services.TryAddSingleton<PublishDomainEventsInterceptor>();
+
         try
         {
             IConnectionMultiplexer connectionMultiplexer = ConnectionMultiplexer.Connect(redisConnectionString);
@@ -61,4 +66,6 @@ public static class InfrastructureConfiguration
 
         return services;
     }
+
+    #endregion
 }

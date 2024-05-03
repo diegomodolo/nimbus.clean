@@ -7,21 +7,21 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Api.Middleware
+namespace Nimbus.Api.Middleware;
+
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+
+public class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger) : IExceptionHandler
 {
-    using Microsoft.AspNetCore.Diagnostics;
-    using Microsoft.AspNetCore.Mvc;
+    #region Public Methods and Operators
 
-    public class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger) : IExceptionHandler
+    /// <inheritdoc />
+    public async ValueTask<bool> TryHandleAsync(
+        HttpContext httpContext,
+        Exception exception,
+        CancellationToken cancellationToken)
     {
-        #region Public Methods and Operators
-
-        /// <inheritdoc />
-        public async ValueTask<bool> TryHandleAsync(
-            HttpContext httpContext,
-            Exception exception,
-            CancellationToken cancellationToken)
-        {
             logger.LogError(exception, "Unhandled exception occurred");
 
             var problemDetails = new ProblemDetails
@@ -38,6 +38,5 @@ namespace Nimbus.Api.Middleware
             return true;
         }
 
-        #endregion
-    }
+    #endregion
 }

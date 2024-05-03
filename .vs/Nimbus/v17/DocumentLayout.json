@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Src\\Studies\\Nimbus\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}|src\\Common\\Nimbus.Common.Domain\\Nimbus.Common.Domain.csproj|d:\\src\\studies\\nimbus\\src\\common\\nimbus.common.domain\\abstractions\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}|src\\Common\\Nimbus.Common.Domain\\Nimbus.Common.Domain.csproj|solutionrelative:src\\common\\nimbus.common.domain\\abstractions\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82C8ED60-3922-4CC4-8D8A-7E3745AD2D39}|Solution Items{82C8ED60-3922-4CC4-8D8A-7E3745AD2D39}|D:\\Src\\Studies\\Nimbus\\.editorconfig||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{82C8ED60-3922-4CC4-8D8A-7E3745AD2D39}|Solution Items{82C8ED60-3922-4CC4-8D8A-7E3745AD2D39}|solutionrelative:.editorconfig||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}|src\\Common\\Nimbus.Common.Domain\\Nimbus.Common.Domain.csproj|d:\\src\\studies\\nimbus\\src\\common\\nimbus.common.domain\\abstractions\\domainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}|src\\Common\\Nimbus.Common.Domain\\Nimbus.Common.Domain.csproj|solutionrelative:src\\common\\nimbus.common.domain\\abstractions\\domainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8EE0FC-171B-4940-80C6-F36411BAAB04}|src\\Common\\Nimbus.Common.Infrastructure\\Nimbus.Common.Infrastructure.csproj|d:\\src\\studies\\nimbus\\src\\common\\nimbus.common.infrastructure\\interceptors\\publishdomaineventsinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8EE0FC-171B-4940-80C6-F36411BAAB04}|src\\Common\\Nimbus.Common.Infrastructure\\Nimbus.Common.Infrastructure.csproj|solutionrelative:src\\common\\nimbus.common.infrastructure\\interceptors\\publishdomaineventsinterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +51,55 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": ".editorconfig",
+              "DocumentMoniker": "D:\\Src\\Studies\\Nimbus\\.editorconfig",
+              "RelativeDocumentMoniker": ".editorconfig",
+              "ToolTip": "D:\\Src\\Studies\\Nimbus\\.editorconfig",
+              "RelativeToolTip": ".editorconfig",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAQwAcBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-03T12:10:12.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Entity.cs",
+              "DocumentMoniker": "D:\\Src\\Studies\\Nimbus\\src\\Common\\Nimbus.Common.Domain\\Abstractions\\Entity.cs",
+              "RelativeDocumentMoniker": "src\\Common\\Nimbus.Common.Domain\\Abstractions\\Entity.cs",
+              "ToolTip": "D:\\Src\\Studies\\Nimbus\\src\\Common\\Nimbus.Common.Domain\\Abstractions\\Entity.cs",
+              "RelativeToolTip": "src\\Common\\Nimbus.Common.Domain\\Abstractions\\Entity.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAcwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T12:09:22.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DomainEvent.cs",
+              "DocumentMoniker": "D:\\Src\\Studies\\Nimbus\\src\\Common\\Nimbus.Common.Domain\\Abstractions\\DomainEvent.cs",
+              "RelativeDocumentMoniker": "src\\Common\\Nimbus.Common.Domain\\Abstractions\\DomainEvent.cs",
+              "ToolTip": "D:\\Src\\Studies\\Nimbus\\src\\Common\\Nimbus.Common.Domain\\Abstractions\\DomainEvent.cs",
+              "RelativeToolTip": "src\\Common\\Nimbus.Common.Domain\\Abstractions\\DomainEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T12:08:49.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PublishDomainEventsInterceptor.cs",
+              "DocumentMoniker": "D:\\Src\\Studies\\Nimbus\\src\\Common\\Nimbus.Common.Infrastructure\\Interceptors\\PublishDomainEventsInterceptor.cs",
+              "RelativeDocumentMoniker": "src\\Common\\Nimbus.Common.Infrastructure\\Interceptors\\PublishDomainEventsInterceptor.cs",
+              "ToolTip": "D:\\Src\\Studies\\Nimbus\\src\\Common\\Nimbus.Common.Infrastructure\\Interceptors\\PublishDomainEventsInterceptor.cs",
+              "RelativeToolTip": "src\\Common\\Nimbus.Common.Infrastructure\\Interceptors\\PublishDomainEventsInterceptor.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAvwCQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T12:07:59.9Z"
             }
           ]
         }

@@ -7,11 +7,10 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Common.Domain.Messaging
-{
-    using MediatR;
-    using Nimbus.Common.Domain.Abstractions;
+namespace Nimbus.Common.Domain.Messaging;
 
-    public interface IQueryHandler<in TQuery, TResponse> : IRequestHandler<TQuery, Result<TResponse>>
-        where TQuery : IQuery<TResponse>;
-}
+using MediatR;
+using Nimbus.Common.Domain.Abstractions;
+
+public interface IQueryHandler<in TQuery, TResponse> : IRequestHandler<TQuery, Result<TResponse>>
+    where TQuery : IQuery<TResponse>;
