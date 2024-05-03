@@ -10,9 +10,9 @@
 namespace Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.C001;
 
 using AutoMapper;
-using Nimbus.Domain.Abstractions;
-using Nimbus.Domain.Cadastros.EstruturaOrganizacional.C001;
-using Nimbus.Domain.Messaging;
+using Nimbus.Common.Domain.Abstractions;
+using Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001;
+using Nimbus.Common.Domain.Messaging;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain.C001;
 
 internal sealed class BuscarC001QueryHandler(IC001Repository repository, IMapper mapper)

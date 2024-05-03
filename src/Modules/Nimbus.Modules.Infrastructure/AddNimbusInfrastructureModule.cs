@@ -12,7 +12,7 @@ namespace Nimbus.Modules.Infrastructure
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using Nimbus.Domain.Abstractions;
+    using Nimbus.Common.Domain.Abstractions;
     using Nimbus.Modules.Infrastructure.Database;
 
     public static class NimbusInfrastructureModule

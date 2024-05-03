@@ -12,7 +12,8 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Nimbus.Api.Extensions;
 using Nimbus.Api.Middleware;
 using Nimbus.Common.Application;
-using Nimbus.Domain;
+using Nimbus.Common.Domain;
+using Nimbus.Common.Infrastructure;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation;
 using Nimbus.Modules.Infrastructure;
@@ -29,16 +30,23 @@ builder.Services.AddControllers().AddApplicationPart(AssemblyReference.Assembly)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Nimbus Common
+builder.Services.AddNimbusDomain();
+
 builder.Services.AddApplication(
     [
         Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation.AssemblyReference.Assembly,
         Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.AssemblyReference.Assembly
     ]);
 
-// Nimbus
+string databaseConnectionString = builder.Configuration.GetConnectionString("Database")!;
+string redisConnectionString = builder.Configuration.GetConnectionString("Cache")!;
+
+builder.Services.AddInfrastructure([], databaseConnectionString, redisConnectionString);
+
+// Nimbus Modules
 builder.Services.AddCadastrosEstruturaOrganizacionalModule();
 builder.Services.AddNimbusInfrastructureModule(builder.Configuration);
-builder.Services.AddNimbusDomain();
 
 builder.Services.AddHealthChecks();
 

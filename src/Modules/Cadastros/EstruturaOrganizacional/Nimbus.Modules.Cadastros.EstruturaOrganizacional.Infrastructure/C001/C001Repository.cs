@@ -10,7 +10,7 @@
 namespace Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure.C001;
 
 using Microsoft.EntityFrameworkCore;
-using Nimbus.Domain.Cadastros.EstruturaOrganizacional.C001;
+using Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain.C001;
 using Nimbus.Modules.Infrastructure.Database;
 

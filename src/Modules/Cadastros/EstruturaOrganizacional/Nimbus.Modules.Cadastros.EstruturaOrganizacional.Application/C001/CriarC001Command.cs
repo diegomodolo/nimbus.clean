@@ -9,6 +9,6 @@
 
 namespace Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.C001;
 
-using Nimbus.Domain.Messaging;
+using Nimbus.Common.Domain.Messaging;
 
 public sealed record CriarC001Command(string C001_Codigo, string C001_Descricao, bool RegistroAtivo) : ICommand<string>;

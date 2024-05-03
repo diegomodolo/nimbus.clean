@@ -24,7 +24,7 @@ namespace Nimbus.Modules.Infrastructure.Database.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Nimbus.Domain.Cadastros.EstruturaOrganizacional.C001.C001_Holding", b =>
+            modelBuilder.Entity("Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001.C001_Holding", b =>
                 {
                     b.Property<string>("C001_Codigo")
                         .HasMaxLength(16)

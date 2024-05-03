@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <PackageReference Include="AspNetCore.HealthChecks.Redis" Version="8.0.1" />
+        <PackageReference Include="MassTransit" Version="8.2.1" />
+        <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Nimbus.Common.Application\Nimbus.Common.Application.csproj" />
+    </ItemGroup>
+
+</Project>

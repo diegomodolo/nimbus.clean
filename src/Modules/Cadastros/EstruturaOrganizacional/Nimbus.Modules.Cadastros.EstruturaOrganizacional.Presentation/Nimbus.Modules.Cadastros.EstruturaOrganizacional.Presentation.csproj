@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <ItemGroup>
-        <ProjectReference Include="..\..\..\..\Common\Nimbus.Domain\Nimbus.Domain.csproj"/>
+        <ProjectReference Include="..\..\..\..\Common\Nimbus.Common.Domain\Nimbus.Common.Domain.csproj" />
         <ProjectReference Include="..\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.csproj"/>
     </ItemGroup>
 

@@ -23,19 +23,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cadastros", "Cadastros", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Api", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Api.csproj", "{7DDABAA5-2966-40F6-A697-1BF69FB0FB5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain.csproj", "{8DD5A40D-3CBC-4199-96D9-F722A2A785CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain.csproj", "{8DD5A40D-3CBC-4199-96D9-F722A2A785CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.csproj", "{CFFA0171-0EC7-44AA-A4F9-34FA01BD1E70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.csproj", "{CFFA0171-0EC7-44AA-A4F9-34FA01BD1E70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure.csproj", "{86147B09-FD9D-4E01-9E75-8B423ABF3534}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure.csproj", "{86147B09-FD9D-4E01-9E75-8B423ABF3534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation.csproj", "{D0C745E9-8FBD-430F-ACAD-A4711E20BD8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation", "src\Modules\Cadastros\EstruturaOrganizacional\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation\Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation.csproj", "{D0C745E9-8FBD-430F-ACAD-A4711E20BD8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Domain", "src\Common\Nimbus.Domain\Nimbus.Domain.csproj", "{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimbus.Common.Domain", "src\Common\Nimbus.Common.Domain\Nimbus.Common.Domain.csproj", "{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Modules.Infrastructure", "src\Modules\Nimbus.Modules.Infrastructure\Nimbus.Modules.Infrastructure.csproj", "{9AB30C3D-91B5-49B1-9C5E-A25C2A88597D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimbus.Modules.Infrastructure", "src\Modules\Nimbus.Modules.Infrastructure\Nimbus.Modules.Infrastructure.csproj", "{9AB30C3D-91B5-49B1-9C5E-A25C2A88597D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimbus.Common.Application", "src\Common\Nimbus.Common.Application\Nimbus.Common.Application.csproj", "{CCCA3062-870E-46AF-8B72-81FCF409C2DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimbus.Common.Application", "src\Common\Nimbus.Common.Application\Nimbus.Common.Application.csproj", "{CCCA3062-870E-46AF-8B72-81FCF409C2DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimbus.Common.Infrastructure", "src\Common\Nimbus.Common.Infrastructure\Nimbus.Common.Infrastructure.csproj", "{BE8EE0FC-171B-4940-80C6-F36411BAAB04}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{01A62FA6-FB5D-499E-BD5B-F92AD7FB93C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EstruturaOrganizacional", "EstruturaOrganizacional", "{33B381D6-5574-4A33-9272-A1C59016DD6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +85,14 @@ Global
 		{CCCA3062-870E-46AF-8B72-81FCF409C2DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCCA3062-870E-46AF-8B72-81FCF409C2DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCCA3062-870E-46AF-8B72-81FCF409C2DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8EE0FC-171B-4940-80C6-F36411BAAB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8EE0FC-171B-4940-80C6-F36411BAAB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8EE0FC-171B-4940-80C6-F36411BAAB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8EE0FC-171B-4940-80C6-F36411BAAB04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01A62FA6-FB5D-499E-BD5B-F92AD7FB93C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A62FA6-FB5D-499E-BD5B-F92AD7FB93C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A62FA6-FB5D-499E-BD5B-F92AD7FB93C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A62FA6-FB5D-499E-BD5B-F92AD7FB93C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,14 +103,16 @@ Global
 		{8D56CAE5-345E-4998-84DE-7A7D6507949C} = {906359F1-BA23-4B2F-9C42-D0E969D17A24}
 		{55BA0D1F-0BF2-4FB9-B0FE-1121BBC5BEAA} = {906359F1-BA23-4B2F-9C42-D0E969D17A24}
 		{CD339EB2-AEFF-4660-93D7-F608CB5C280B} = {55BA0D1F-0BF2-4FB9-B0FE-1121BBC5BEAA}
-		{7DDABAA5-2966-40F6-A697-1BF69FB0FB5F} = {CD339EB2-AEFF-4660-93D7-F608CB5C280B}
-		{8DD5A40D-3CBC-4199-96D9-F722A2A785CC} = {CD339EB2-AEFF-4660-93D7-F608CB5C280B}
-		{CFFA0171-0EC7-44AA-A4F9-34FA01BD1E70} = {CD339EB2-AEFF-4660-93D7-F608CB5C280B}
-		{86147B09-FD9D-4E01-9E75-8B423ABF3534} = {CD339EB2-AEFF-4660-93D7-F608CB5C280B}
-		{D0C745E9-8FBD-430F-ACAD-A4711E20BD8B} = {CD339EB2-AEFF-4660-93D7-F608CB5C280B}
+		{7DDABAA5-2966-40F6-A697-1BF69FB0FB5F} = {33B381D6-5574-4A33-9272-A1C59016DD6B}
+		{8DD5A40D-3CBC-4199-96D9-F722A2A785CC} = {33B381D6-5574-4A33-9272-A1C59016DD6B}
+		{CFFA0171-0EC7-44AA-A4F9-34FA01BD1E70} = {33B381D6-5574-4A33-9272-A1C59016DD6B}
+		{86147B09-FD9D-4E01-9E75-8B423ABF3534} = {33B381D6-5574-4A33-9272-A1C59016DD6B}
+		{D0C745E9-8FBD-430F-ACAD-A4711E20BD8B} = {33B381D6-5574-4A33-9272-A1C59016DD6B}
 		{364CEE9F-5157-4EA2-BDE0-25112C2A2C8B} = {8D56CAE5-345E-4998-84DE-7A7D6507949C}
 		{9AB30C3D-91B5-49B1-9C5E-A25C2A88597D} = {55BA0D1F-0BF2-4FB9-B0FE-1121BBC5BEAA}
 		{CCCA3062-870E-46AF-8B72-81FCF409C2DF} = {8D56CAE5-345E-4998-84DE-7A7D6507949C}
+		{BE8EE0FC-171B-4940-80C6-F36411BAAB04} = {8D56CAE5-345E-4998-84DE-7A7D6507949C}
+		{33B381D6-5574-4A33-9272-A1C59016DD6B} = {CD339EB2-AEFF-4660-93D7-F608CB5C280B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AE1F2E76-84B1-4E61-9DC2-1889AC8CD7F8}

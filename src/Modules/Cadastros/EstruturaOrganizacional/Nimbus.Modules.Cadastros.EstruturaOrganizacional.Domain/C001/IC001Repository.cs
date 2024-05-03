@@ -9,7 +9,7 @@
 
 namespace Nimbus.Modules.Cadastros.EstruturaOrganizacional.Domain.C001;
 
-using Nimbus.Domain.Cadastros.EstruturaOrganizacional.C001;
+using Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001;
 
 public interface IC001Repository
 {

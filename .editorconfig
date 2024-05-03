@@ -259,6 +259,9 @@ dotnet_diagnostic.CA1002.severity = none
 # CA1008: Enums should have zero value
 dotnet_diagnostic.CA1008.severity = none
 
+# CA1031: Do not catch general exception types
+dotnet_diagnostic.CA1031.severity = none
+
 # CA1040: Avoid empty interfaces
 dotnet_diagnostic.CA1040.severity = none
 

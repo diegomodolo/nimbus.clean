@@ -12,9 +12,7 @@ namespace Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation.C001;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Nimbus.Domain.Abstractions;
-using Nimbus.Domain.Cadastros.EstruturaOrganizacional.C001;
-using Nimbus.Domain.Extensions;
+using Nimbus.Common.Domain.Extensions;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.C001;
 
 [Route("api/v2/c001")]

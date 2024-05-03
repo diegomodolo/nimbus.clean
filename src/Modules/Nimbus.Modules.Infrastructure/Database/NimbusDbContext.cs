@@ -10,11 +10,11 @@
 namespace Nimbus.Modules.Infrastructure.Database;
 
 using Microsoft.EntityFrameworkCore;
-using Nimbus.Domain.Abstractions;
-using Nimbus.Domain.Cadastros.EstruturaOrganizacional.C001;
+using Nimbus.Common.Domain.Abstractions;
+using Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001;
 
 public sealed class NimbusDbContext(DbContextOptions<NimbusDbContext> options) : DbContext(options),
-    IUnitOfWork
+                                                                                 IUnitOfWork
 {
     #region Public Properties
 
