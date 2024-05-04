@@ -12,6 +12,7 @@ namespace Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation.C001;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Nimbus.Common.Domain.Extensions;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.C001;
 
 [Route("api/v2/c001")]
@@ -27,7 +28,7 @@ public sealed class CriarC001(ISender sender) : ControllerBase
 
         var codigo = await sender.Send(command);
 
-        return Results.Ok(codigo);
+        return codigo.Match(Results.Ok, ApiResults.Problem);
     }
 
     #endregion

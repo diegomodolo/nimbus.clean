@@ -103,3 +103,11 @@ l
 <src/Common/Nimbus.Common.Domain/Abstractions/IDomainEvent.cs,c\4\c461984ae73030ed4e1d784073fe32d97037e0b5
 r
 Bsrc/Common/Nimbus.Common.Application/EventBus/IIntegrationEvent.cs,8\b\8b8e2f5f9db0c49d62d9bb9edb8d37a2ef8b8164
+ƒ
+Ssrc/Common/Nimbus.Common.Application/Behaviors/ExceptionHandlingPipelineBehavior.cs,0\a\0a602e6b028cce5b6fd326c9b342e75670170ce8
+€
+Psrc/Common/Nimbus.Common.Application/Behaviors/RequestLoggingPipelineBehavior.cs,a\d\ad628aaf5bdb3c349ca7515f0b33df601b1d7940
+|
+Lsrc/Common/Nimbus.Common.Application/Behaviors/ValidationPipelineBehavior.cs,7\2\7288b2ed66593f6207d602905931d2a7c71ead0f
+²
+src/Modules/Cadastros/EstruturaOrganizacional/Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application/C001/C001_Validator.cs,d\6\d65b084139204e233f5417ada7280b12e94bec8e

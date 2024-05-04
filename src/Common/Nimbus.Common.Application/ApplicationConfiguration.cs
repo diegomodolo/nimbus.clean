@@ -12,6 +12,7 @@ namespace Nimbus.Common.Application;
 using System.Reflection;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using Nimbus.Common.Application.Behaviors;
 
 public static class ApplicationConfiguration
 {
@@ -23,12 +24,9 @@ public static class ApplicationConfiguration
             config =>
                 {
                     config.RegisterServicesFromAssemblies(moduleAssemblies);
-
-#pragma warning disable S125
-                    // config.AddOpenBehavior(typeof(ExceptionHandlingPipelineBehavior<,>));
-#pragma warning restore S125
-                    // config.AddOpenBehavior(typeof(RequestLoggingPipelineBehavior<,>));
-                    // config.AddOpenBehavior(typeof(ValidationPipelineBehavior<,>));
+                    config.AddOpenBehavior(typeof(ExceptionHandlingPipelineBehavior<,>));
+                    config.AddOpenBehavior(typeof(RequestLoggingPipelineBehavior<,>));
+                    config.AddOpenBehavior(typeof(ValidationPipelineBehavior<,>));
                 });
 
         services.AddValidatorsFromAssemblies(moduleAssemblies, includeInternalTypes: true);
