@@ -7,23 +7,22 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Modules.IntegrationTest
+namespace Nimbus.Modules.IntegrationTest;
+
+using MassTransit;
+using Nimbus.Modules.Cadastros.EstruturaOrganizacional.IntegrationEvents;
+
+public sealed class C001CriadaIntegrationEventConsumer : IConsumer<C001CriadaIntegrationEvent>
 {
-    using MassTransit;
-    using Nimbus.Modules.Cadastros.EstruturaOrganizacional.IntegrationEvents;
+    #region Public Methods and Operators
 
-    public sealed class C001CriadaIntegrationEventConsumer : IConsumer<C001CriadaIntegrationEvent>
+    /// <inheritdoc />
+    public async Task Consume(ConsumeContext<C001CriadaIntegrationEvent> context)
     {
-        #region Implementation of IConsumer<in C001CriadaIntegrationEvent>
+        Console.WriteLine($"Evento {context.Message.GetType().Name} consumido com sucesso");
 
-        /// <inheritdoc />
-        public async Task Consume(ConsumeContext<C001CriadaIntegrationEvent> context)
-        {
-            Console.WriteLine($"Evento {context.Message.GetType().Name} consumido com sucesso");
-
-            await Task.CompletedTask;
-        }
-
-        #endregion
+        await Task.CompletedTask;
     }
+
+    #endregion
 }

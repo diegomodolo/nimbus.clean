@@ -15,9 +15,9 @@ public abstract class IntegrationEvent : IIntegrationEvent
 
     protected IntegrationEvent(Guid id, DateTime occurredOnUtc)
     {
-            this.Id = id;
-            this.OccurredOnUtc = occurredOnUtc;
-        }
+        this.Id = id;
+        this.OccurredOnUtc = occurredOnUtc;
+    }
 
     #endregion
 

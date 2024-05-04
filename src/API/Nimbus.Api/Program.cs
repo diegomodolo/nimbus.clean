@@ -49,7 +49,9 @@ builder.Services.AddInfrastructure([IntegrationTestModule.ConfigureConsumers], d
 builder.Services.AddCadastrosEstruturaOrganizacionalModule();
 builder.Services.AddNimbusInfrastructureModule(builder.Configuration);
 
-builder.Services.AddHealthChecks();
+builder.Services.AddHealthChecks().AddSqlServer(databaseConnectionString);
+
+// add sqlserver healthcheck
 
 var app = builder.Build();
 

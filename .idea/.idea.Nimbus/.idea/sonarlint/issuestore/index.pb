@@ -85,8 +85,6 @@ p
 gsrc/Common/Nimbus.Common.Domain/Cadastros/EstruturaOrganizacional/C001/Events/C001CreatedDomainEvent.cs,f\0\f0359dae1e0b084dc01c2ee13a4731aa7a5fcc20
 r
 Bsrc/Common/Nimbus.Common.Application/Exceptions/NimbusException.cs,e\2\e24e76ac6027799570ca3261da39ac8ad884fd39
-ª
-zsrc/Modules/Cadastros/EstruturaOrganizacional/Nimbus.Modules.Cadastros.EstruturaOrganizacional.IntegrationEvents/Class1.cs,9\5\95639ffe5cd9f0b5e28dbd304ee94fba48bd8cbf
 ¿
 Žsrc/Modules/Cadastros/EstruturaOrganizacional/Nimbus.Modules.Cadastros.EstruturaOrganizacional.IntegrationEvents/C001CriadaIntegrationEvent.cs,d\1\d1ac483c2083b1d3ed2324686bccfccc47ba4634
 Š
@@ -97,3 +95,11 @@ Zsrc/Modules/Cadastros/Nimbus.Modules.IntegrationTest/Nimbus.Modules.Integration
 Msrc/Modules/Cadastros/Nimbus.Modules.IntegrationTest/IntegrationTestModule.cs,4\0\40851d1e05ec9535f7835264747bbb78aa3f2508
 †
 Vsrc/Common/Nimbus.Common.Domain/Cadastros/EstruturaOrganizacional/C002/C002_Empresa.cs,b\1\b1ebbd86519b0d4e1faf223f415179296e188136
+‰
+Ysrc/Common/Nimbus.Common.Domain/Cadastros/EstruturaOrganizacional/C001/C001_HoldingDto.cs,3\d\3da481a4b8381746ca19ae8c3dfbbe16cfec17b0
+q
+Asrc/Common/Nimbus.Common.Application/EventBus/IntegrationEvent.cs,1\0\10bab5c6c93479340b79f237815d4537cd2ebe10
+l
+<src/Common/Nimbus.Common.Domain/Abstractions/IDomainEvent.cs,c\4\c461984ae73030ed4e1d784073fe32d97037e0b5
+r
+Bsrc/Common/Nimbus.Common.Application/EventBus/IIntegrationEvent.cs,8\b\8b8e2f5f9db0c49d62d9bb9edb8d37a2ef8b8164

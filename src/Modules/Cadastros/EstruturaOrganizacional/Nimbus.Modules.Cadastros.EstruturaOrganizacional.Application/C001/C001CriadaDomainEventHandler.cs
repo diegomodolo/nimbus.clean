@@ -17,9 +17,10 @@ using Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001.Events;
 using Nimbus.Common.Domain.Messaging;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.IntegrationEvents;
 
-internal sealed class C001CriadaDomainEventHandler(ISender sender, IEventBus eventBus) : IDomainEventHandler<C001CreatedDomainEvent>
+internal sealed class C001CriadaDomainEventHandler(ISender sender, IEventBus eventBus)
+    : IDomainEventHandler<C001CreatedDomainEvent>
 {
-    #region Implementation of INotificationHandler<in C001CreatedDomainEvent>
+    #region Public Methods and Operators
 
     /// <inheritdoc />
     public async Task Handle(C001CreatedDomainEvent notification, CancellationToken cancellationToken)
@@ -32,15 +33,7 @@ internal sealed class C001CriadaDomainEventHandler(ISender sender, IEventBus eve
         }
 
         await eventBus.PublishAsync(
-            new C001CriadaIntegrationEvent(
-                notification.Id,
-                notification.OccurredOnUtc,
-                new C001_HoldingDto
-                    {
-                        C001_Codigo = result.Value.C001_Codigo,
-                        C001_Descricao = result.Value.C001_Descricao,
-                        RegistroAtivo = result.Value.RegistroAtivo
-                    }),
+            new C001CriadaIntegrationEvent(notification.Id, notification.OccurredOnUtc),
             cancellationToken);
     }
 

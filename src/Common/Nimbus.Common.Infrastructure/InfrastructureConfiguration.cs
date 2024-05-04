@@ -50,7 +50,7 @@ public static class InfrastructureConfiguration
         services.AddMassTransit(
             configure =>
                 {
-                    foreach (var configureConsumer in moduleConfigureConsumers)
+                    foreach (Action<IRegistrationConfigurator> configureConsumer in moduleConfigureConsumers)
                     {
                         configureConsumer(configure);
                     }
