@@ -37,8 +37,6 @@ d
 Ñsrc/Modules/Cadastros/EstruturaOrganizacional/Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure/C001/C001Repository.cs,5\b\5bfe17166235c9c79a5a0d620aea71d964b8feed
 u
 Esrc/Modules/Nimbus.Modules.Infrastructure/Database/NimbusDbContext.cs,9\9\990d8022ffc290f199c8daa54fa045d83a9f3c19
-á
-Wsrc/Modules/Nimbus.Modules.Infrastructure/Database/Migrations/20240502190056_Initial.cs,9\5\95729f7d5181deb1a05a70da6ea659d042544bb3
 £
 ssrc/Modules/Cadastros/EstruturaOrganizacional/Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation/Tags.cs,4\c\4ca2fb5fd44b4b0deff306bf77f2a8e16c6fed91
 ≥
@@ -109,8 +107,6 @@ Ssrc/Common/Nimbus.Common.Application/Behaviors/ExceptionHandlingPipelineBehavio
 Psrc/Common/Nimbus.Common.Application/Behaviors/RequestLoggingPipelineBehavior.cs,a\d\ad628aaf5bdb3c349ca7515f0b33df601b1d7940
 |
 Lsrc/Common/Nimbus.Common.Application/Behaviors/ValidationPipelineBehavior.cs,7\2\7288b2ed66593f6207d602905931d2a7c71ead0f
-≤
-Åsrc/Modules/Cadastros/EstruturaOrganizacional/Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application/C001/C001_Validator.cs,d\6\d65b084139204e233f5417ada7280b12e94bec8e
 É
 Ssrc/Common/Nimbus.Common.Infrastructure/Authentication/JwtBearerConfigureOptions.cs,5\4\54a1c8bb34306411a00d54057704a684b4914393
 Ç
@@ -121,16 +117,10 @@ l
 <src/Common/Nimbus.Common.Domain/Messaging/ICommandHandler.cs,c\4\c4088107edcdc127e1c7855798a2cd75789cf0d5
 c
 3src/Common/Nimbus.Common.Domain/Messaging/IQuery.cs,2\5\259a2cd33b3f75f7a268137bd844d336cf511918
-á
-Wsrc/Modules/Nimbus.Modules.Infrastructure/Database/Migrations/20240504134627_Initial.cs,7\8\78df672706b7f6b091b233e7ec9c3a586c3db15e
 ê
 `src/Modules/Sistema/Nimbus.Modules.Sistema.Application/Nimbus.Modules.Sistema.Application.csproj,5\8\587ae97a400d1eb2f01082c95a38b20c50795e49
-p
-@src/Modules/Sistema/Nimbus.Modules.Sistema.Application/Class1.cs,8\8\88e07cd6a0fdedab143d5c0ddf967a5b2c62f131
 T
 $src/API/Nimbus.Api/Nimbus.Api.csproj,7\e\7ec6443c12dbaff8ab392c09f0e4e3b548d2e2d9
-á
-Wsrc/Modules/Nimbus.Modules.Infrastructure/Database/Migrations/20240504134707_Initial.cs,6\3\6308c71ed1242fd8ef2d519cf00561a8e03bc1c0
 q
 Asrc/Common/Nimbus.Common.Domain/Cadastros/Sistema/S008_Usuario.cs,c\b\cbcb1ebbfc1c9bd69ea68454b89b5a8ec37f1739
 t
@@ -157,8 +147,6 @@ _
 /src/Common/Nimbus.Common.Domain/DomainModule.cs,8\3\838145fb28a07b5699ae54b6911ea6057558b6fb
 ç
 ]src/Modules/Nimbus.Modules.Infrastructure/Database/Migrations/NimbusDbContextModelSnapshot.cs,7\3\734150ebc397105614583a273c27d939d1abc6c9
-ê
-`src/Modules/Nimbus.Modules.Infrastructure/Database/Migrations/20240504134707_Initial.Designer.cs,2\5\25bb87ee0922e161962fa2ab103556686acc4ffa
 j
 :src/Common/Nimbus.Common.Domain/Messaging/IQueryHandler.cs,a\6\a67334c82a2f9df2f2af1b71100b7ece105b2d62
 h
@@ -200,8 +188,6 @@ Ksrc/Modules/Sistema/Nimbus.Modules.Sistema.Application/AssemblyReference.cs,5\
 fsrc/Modules/Sistema/Nimbus.Modules.Sistema.Infrastructure/Nimbus.Modules.Sistema.Infrastructure.csproj,5\5\559c5179556af71928b100cdeea8f53bd05704bd
 Ä
 Psrc/Modules/Sistema/Nimbus.Modules.Sistema.Infrastructure/S008/S008Repository.cs,0\6\068014e6e890189312f346caeb89a601a6801467
-
-Osrc/Modules/Sistema/Nimbus.Modules.Sistema.Infrastructure/AddSegurancaModule.cs,8\4\84a8080131d751ca1f71a185be0f83629ab1daf4
 |
 Lsrc/Modules/Sistema/Nimbus.Modules.Sistema.Presentation/AssemblyReference.cs,8\b\8bd2de4b91c42d020705064b54d89a808be36fe0
 o
