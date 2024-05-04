@@ -1,0 +1,11 @@
+{
+    "Sistema": {
+        "KeyCloak": {
+            "AdminUrl": "http://nimbus.identity:8080/admin/realms/Nimbus/",
+            "TokenUrl": "http://nimbus.identity:8080/realms/Nimbus/protocol/openid-connect/token",
+            "ConfidentialClientId": "nimbus-confidential-client",
+            "ConfidentialClientSecret": "njFBYy2JFLu52JGeG4mLkpY4Q6i9PxiM",
+            "PublicClientId": "nimbus-public-client"
+        }
+    }
+}

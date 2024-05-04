@@ -10,19 +10,22 @@
 namespace Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation.C001;
 
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Nimbus.Common.Domain.Extensions;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.C001;
 
 [Route("api/v2/c001")]
+[Tags(Tags.Cadastros)]
+[Authorize]
 public sealed class CriarC001(ISender sender) : ControllerBase
 {
     #region Public Methods and Operators
 
     [HttpPost]
     [Tags(Tags.Cadastros)]
-    public async Task<IResult> Post([FromBody] Request request)
+    public async Task<IResult> Post([FromBody] CriarC001Request request)
     {
         var command = new CriarC001Command(request.C001_Codigo, request.C001_Descricao, request.RegistroAtivo);
 
@@ -30,19 +33,6 @@ public sealed class CriarC001(ISender sender) : ControllerBase
 
         return codigo.Match(Results.Ok, ApiResults.Problem);
     }
-
-    #endregion
-}
-
-public sealed class Request
-{
-    #region Public Properties
-
-    public string C001_Codigo { get; init; } = string.Empty;
-
-    public string C001_Descricao { get; init; } = string.Empty;
-
-    public bool RegistroAtivo { get; init; }
 
     #endregion
 }

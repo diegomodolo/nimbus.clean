@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\Nimbus.Modules.Infrastructure\Nimbus.Modules.Infrastructure.csproj" />
+    <ProjectReference Include="..\Nimbus.Modules.Sistema.Application\Nimbus.Modules.Sistema.Application.csproj" />
+    <ProjectReference Include="..\Nimbus.Modules.Sistema.Domain\Nimbus.Modules.Sistema.Domain.csproj" />
+  </ItemGroup>
+</Project>

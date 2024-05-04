@@ -15,9 +15,9 @@ using Nimbus.Common.Application;
 using Nimbus.Common.Domain;
 using Nimbus.Common.Infrastructure;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Infrastructure;
-using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation;
 using Nimbus.Modules.Infrastructure;
 using Nimbus.Modules.IntegrationTest;
+using Nimbus.Modules.Sistema.Infrastructure;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,7 +26,8 @@ builder.Host.UseSerilog((context, loggerConfig) => loggerConfig.ReadFrom.Configu
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
-builder.Services.AddControllers().AddApplicationPart(AssemblyReference.Assembly).AddControllersAsServices();
+builder.Services.AddControllers().AddApplicationPart(Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation.AssemblyReference.Assembly).AddControllersAsServices();
+builder.Services.AddControllers().AddApplicationPart(Nimbus.Modules.Sistema.Presentation.AssemblyReference.Assembly).AddControllersAsServices();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -37,8 +38,12 @@ builder.Services.AddNimbusDomain();
 builder.Services.AddApplication(
     [
         Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation.AssemblyReference.Assembly,
-        Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.AssemblyReference.Assembly
+        Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.AssemblyReference.Assembly,
+        Nimbus.Modules.Sistema.Presentation.AssemblyReference.Assembly,
+        Nimbus.Modules.Sistema.Application.AssemblyReference.Assembly
     ]);
+
+builder.Configuration.AddModuleConfiguration(["sistema"]);
 
 string databaseConnectionString = builder.Configuration.GetConnectionString("Database")!;
 string redisConnectionString = builder.Configuration.GetConnectionString("Cache")!;
@@ -47,9 +52,13 @@ builder.Services.AddInfrastructure([IntegrationTestModule.ConfigureConsumers], d
 
 // Nimbus Modules
 builder.Services.AddCadastrosEstruturaOrganizacionalModule();
+builder.Services.AddSegurancaModule(builder.Configuration);
 builder.Services.AddNimbusInfrastructureModule(builder.Configuration);
 
-builder.Services.AddHealthChecks().AddSqlServer(databaseConnectionString);
+builder.Services.AddHealthChecks()
+       .AddSqlServer(databaseConnectionString)
+       .AddRedis(redisConnectionString)
+       .AddUrlGroup(new Uri(builder.Configuration.GetValue<string>("KeyCloak:HealthUrl")!), HttpMethod.Get, "keycloak");
 
 // add sqlserver healthcheck
 
@@ -79,5 +88,9 @@ app.MapControllers();
 app.UseSerilogRequestLogging();
 
 app.UseExceptionHandler();
+
+app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.Run();

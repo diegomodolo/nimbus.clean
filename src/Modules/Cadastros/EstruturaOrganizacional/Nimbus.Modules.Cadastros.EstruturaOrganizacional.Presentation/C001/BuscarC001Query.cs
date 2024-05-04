@@ -16,6 +16,7 @@ using Nimbus.Common.Domain.Extensions;
 using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.C001;
 
 [Route("api/v2/c001")]
+[Tags(Tags.Cadastros)]
 public sealed class BuscarC001(ISender sender) : ControllerBase
 {
     #region Public Methods and Operators

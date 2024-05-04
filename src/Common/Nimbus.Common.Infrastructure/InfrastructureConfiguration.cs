@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Nimbus.Common.Application.Caching;
 using Nimbus.Common.Application.EventBus;
+using Nimbus.Common.Infrastructure.Authentication;
 using Nimbus.Common.Infrastructure.Caching;
 using Nimbus.Common.Infrastructure.Interceptors;
 using StackExchange.Redis;
@@ -28,6 +29,8 @@ public static class InfrastructureConfiguration
         string databaseConnectionString,
         string redisConnectionString)
     {
+        services.AddAuthenticationInternal();
+
         services.TryAddSingleton<PublishDomainEventsInterceptor>();
 
         try

@@ -10,8 +10,10 @@
 namespace Nimbus.Common.Domain.Cadastros.EstruturaOrganizacional.C001;
 
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Nimbus.Common.Domain.Abstractions;
 
+[Table(nameof(C001_Holding), Schema = "Cadastros")]
 public sealed partial class C001_Holding : Entity
 {
     #region Constructors and Destructors
