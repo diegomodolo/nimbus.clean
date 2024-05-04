@@ -7,73 +7,72 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Common.Application.Behaviors
+namespace Nimbus.Common.Application.Behaviors;
+
+using FluentValidation;
+using FluentValidation.Results;
+using MediatR;
+using Nimbus.Common.Domain.Abstractions;
+using Nimbus.Common.Domain.Messaging;
+
+public class ValidationPipelineBehavior<TRequest, TResponse>(IEnumerable<IValidator<TRequest>> validators)
+    : IPipelineBehavior<TRequest, TResponse>
+    where TRequest : IBaseCommand
 {
-    using FluentValidation;
-    using FluentValidation.Results;
-    using MediatR;
-    using Nimbus.Common.Domain.Abstractions;
-    using Nimbus.Common.Domain.Messaging;
+    #region Public Methods and Operators
 
-    public class ValidationPipelineBehavior<TRequest, TResponse>(IEnumerable<IValidator<TRequest>> validators)
-        : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : IBaseCommand
+    /// <inheritdoc />
+    public async Task<TResponse> Handle(
+        TRequest request,
+        RequestHandlerDelegate<TResponse> next,
+        CancellationToken cancellationToken)
     {
-        #region Public Methods and Operators
+        var validationFailures = await this.ValidateAsync(request);
 
-        /// <inheritdoc />
-        public async Task<TResponse> Handle(
-            TRequest request,
-            RequestHandlerDelegate<TResponse> next,
-            CancellationToken cancellationToken)
+        if (validationFailures.Length == 0)
         {
-            var validationFailures = await this.ValidateAsync(request);
-
-            if (validationFailures.Length == 0)
-            {
-                return await next();
-            }
-
-            if (typeof(TResponse).IsGenericType && typeof(TResponse).GetGenericTypeDefinition() == typeof(Result<>))
-            {
-                var resultType = typeof(TResponse).GetGenericArguments()[0];
-
-                var failureMethod = typeof(Result<>).MakeGenericType(resultType)
-                                                    .GetMethod(nameof(Result<object>.ValidationFailure));
-
-                if (failureMethod is not null)
-                {
-                    return (TResponse)failureMethod.Invoke(null, [CreateValidationError(validationFailures)])!;
-                }
-                else if (typeof(TResponse) == typeof(Result))
-                {
-                    return (TResponse)(object)Result.Failure(CreateValidationError(validationFailures));
-                }
-            }
-
-            throw new ValidationException(validationFailures);
+            return await next();
         }
 
-        #endregion
-
-        private async Task<ValidationFailure[]> ValidateAsync(TRequest request)
+        if (typeof(TResponse).IsGenericType && typeof(TResponse).GetGenericTypeDefinition() == typeof(Result<>))
         {
-            if (!validators.Any())
+            var resultType = typeof(TResponse).GetGenericArguments()[0];
+
+            var failureMethod = typeof(Result<>).MakeGenericType(resultType)
+                                                .GetMethod(nameof(Result<object>.ValidationFailure));
+
+            if (failureMethod is not null)
             {
-                return [];
+                return (TResponse)failureMethod.Invoke(null, [CreateValidationError(validationFailures)])!;
             }
-
-            var context = new ValidationContext<TRequest>(request);
-
-            var validationResults = await Task.WhenAll(
-                validators.Select(validator => validator.ValidateAsync(context)));
-
-            var validationFailures = validationResults.Where(c => !c.IsValid).SelectMany(c => c.Errors).ToArray();
-
-            return validationFailures;
+            else if (typeof(TResponse) == typeof(Result))
+            {
+                return (TResponse)(object)Result.Failure(CreateValidationError(validationFailures));
+            }
         }
 
-        private static ValidationError CreateValidationError(ValidationFailure[] validationFailures) =>
-            new(validationFailures.Select(c => Error.Problem(c.ErrorCode, c.ErrorMessage)).ToArray());
+        throw new ValidationException(validationFailures);
     }
+
+    #endregion
+
+    private async Task<ValidationFailure[]> ValidateAsync(TRequest request)
+    {
+        if (!validators.Any())
+        {
+            return [];
+        }
+
+        var context = new ValidationContext<TRequest>(request);
+
+        var validationResults = await Task.WhenAll(
+            validators.Select(validator => validator.ValidateAsync(context)));
+
+        var validationFailures = validationResults.Where(c => !c.IsValid).SelectMany(c => c.Errors).ToArray();
+
+        return validationFailures;
+    }
+
+    private static ValidationError CreateValidationError(ValidationFailure[] validationFailures) =>
+        new(validationFailures.Select(c => Error.Problem(c.ErrorCode, c.ErrorMessage)).ToArray());
 }

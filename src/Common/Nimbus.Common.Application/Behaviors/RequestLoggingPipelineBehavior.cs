@@ -7,61 +7,60 @@
 //  </summary>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace Nimbus.Common.Application.Behaviors
+namespace Nimbus.Common.Application.Behaviors;
+
+using MediatR;
+using Microsoft.Extensions.Logging;
+using Nimbus.Common.Domain.Abstractions;
+using Serilog.Context;
+
+internal sealed class RequestLoggingPipelineBehavior<TRequest, TResponse>(
+    ILogger<RequestLoggingPipelineBehavior<TRequest, TResponse>> logger) : IPipelineBehavior<TRequest, TResponse>
+    where TRequest : class where TResponse : Result
 {
-    using MediatR;
-    using Microsoft.Extensions.Logging;
-    using Nimbus.Common.Domain.Abstractions;
-    using Serilog.Context;
+    #region Public Methods and Operators
 
-    internal sealed class RequestLoggingPipelineBehavior<TRequest, TResponse>(
-        ILogger<RequestLoggingPipelineBehavior<TRequest, TResponse>> logger) : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : class where TResponse : Result
+    /// <inheritdoc />
+    public async Task<TResponse> Handle(
+        TRequest request,
+        RequestHandlerDelegate<TResponse> next,
+        CancellationToken cancellationToken)
     {
-        #region Public Methods and Operators
+        var moduleName = GetModuleName(typeof(TRequest).FullName!);
+        string requestName = typeof(TRequest).Name;
 
-        /// <inheritdoc />
-        public async Task<TResponse> Handle(
-            TRequest request,
-            RequestHandlerDelegate<TResponse> next,
-            CancellationToken cancellationToken)
+        using (LogContext.PushProperty("Module", moduleName))
         {
-            var moduleName = GetModuleName(typeof(TRequest).FullName!);
-            string requestName = typeof(TRequest).Name;
+            logger.LogInformation("Processing request {RequestName}", requestName);
 
-            using (LogContext.PushProperty("Module", moduleName))
+            TResponse result = await next();
+
+            if (result.IsSuccess)
             {
-                logger.LogInformation("Processing request {RequestName}", requestName);
-
-                TResponse result = await next();
-
-                if (result.IsSuccess)
-                {
-                    logger.LogInformation("Complete request {RequestName}", requestName);
-                }
-                else
-                {
-                    using (LogContext.PushProperty("Error", result.Error, true))
-                    {
-                        logger.LogError("Complete request {RequestName} with error", requestName);
-                    }
-                }
-
-                return result;
+                logger.LogInformation("Complete request {RequestName}", requestName);
             }
+            else
+            {
+                using (LogContext.PushProperty("Error", result.Error, true))
+                {
+                    logger.LogError("Complete request {RequestName} with error", requestName);
+                }
+            }
+
+            return result;
         }
-
-        #endregion
-
-        #region Methods
-
-        private static string GetModuleName(string requestName)
-        {
-            var requestNameParts = requestName.Split(".");
-
-            return requestNameParts[^1];
-        }
-
-        #endregion
     }
+
+    #endregion
+
+    #region Methods
+
+    private static string GetModuleName(string requestName)
+    {
+        var requestNameParts = requestName.Split(".");
+
+        return requestNameParts[^1];
+    }
+
+    #endregion
 }
