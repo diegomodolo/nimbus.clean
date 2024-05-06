@@ -220,3 +220,7 @@ h
 ^src/Modules/Sistema/Nimbus.Modules.Sistema.Infrastructure/Identity/CredentialRepresentation.cs,8\c\8c12f85892fdd17a76a63d634a70e3cf99d8be75
 ˆ
 Xsrc/Modules/Sistema/Nimbus.Modules.Sistema.Infrastructure/Identity/UserRepresentation.cs,5\a\5a0decc79cc0c47f46e59b0bcec6fb9b507c0082
+±
+€src/Modules/Cadastros/EstruturaOrganizacional/Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application/C001/C001Validator.cs,9\4\949a565af9acf2b4f65712758d678d5b66bd9d96
+µ
+„src/Modules/Cadastros/EstruturaOrganizacional/Nimbus.Modules.Cadastros.EstruturaOrganizacional.Presentation/C001/CriarC001Request.cs,8\d\8dc88419eb427103f8b0a6f91fcf3c57c4d23ecf

@@ -23,8 +23,8 @@ services:
       RESHARPER_LOG_CONF: "/etc/opt/rider-debugger/backend-log.xml"
     image: "nimbusapi:dev"
     ports:
-    - "127.0.0.1:57022:57100"
-    - "127.0.0.1:57222:57300"
+    - "127.0.0.1:57001:57100"
+    - "127.0.0.1:57201:57300"
     volumes:
     - "C:\\Users\\diego\\.nuget\\packages:/home/app/.nuget/packages"
     - "D:\\Src\\Studies\\Nimbus\\src\\API\\Nimbus.Api:/app:rw"
@@ -33,5 +33,5 @@ services:
       Linux64:/opt/rider-debugger"
     - "C:\\Users\\diego\\AppData\\Local\\JetBrains\\Installations\\Rider241\\bin:/etc/opt/rider-debugger/backend-log.xml"
     - "C:\\Users\\diego\\AppData\\Local\\JetBrains\\Rider2024.1\\log\\DebuggerWorker\\\
-      JetBrains.Debugger.Worker.2024_5_04_15_33_14:/var/opt/rider-debugger:rw"
+      JetBrains.Debugger.Worker.2024_5_06_15_06_25:/var/opt/rider-debugger:rw"
     working_dir: "/app"

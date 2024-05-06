@@ -244,7 +244,6 @@ csharp_style_expression_bodied_lambdas = true:silent
 csharp_style_expression_bodied_local_functions = false:silent
 csharp_style_inlined_variable_declaration = true:suggestion
 csharp_style_deconstructed_variable_declaration = true:suggestion
-dotnet_diagnostic.S101.severity = none
 
 #### .NET Coding Conventions ####
 [*.{cs,vb}]

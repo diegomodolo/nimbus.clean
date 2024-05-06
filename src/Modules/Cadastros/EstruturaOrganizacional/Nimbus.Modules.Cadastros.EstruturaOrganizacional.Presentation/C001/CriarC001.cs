@@ -18,7 +18,6 @@ using Nimbus.Modules.Cadastros.EstruturaOrganizacional.Application.C001;
 
 [Route("api/v2/c001")]
 [Tags(Tags.Cadastros)]
-[Authorize]
 public sealed class CriarC001(ISender sender) : ControllerBase
 {
     #region Public Methods and Operators

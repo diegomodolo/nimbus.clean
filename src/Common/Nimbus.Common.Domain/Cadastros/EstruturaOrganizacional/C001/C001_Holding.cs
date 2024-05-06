@@ -28,10 +28,10 @@ public sealed partial class C001_Holding : Entity
 
     [Key]
     [MaxLength(16)]
-    public string C001_Codigo { get; set; } = string.Empty;
+    public string C001_Codigo { get; private set; } = string.Empty;
 
     [MaxLength(60)]
-    public string C001_Descricao { get; set; } = string.Empty;
+    public string C001_Descricao { get; private set; } = string.Empty;
 
     #endregion
 }
